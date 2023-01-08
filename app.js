@@ -12,7 +12,7 @@ app.use(express.json())
 
 const users = []
 const tweets = []
-const avatarCheck = [{avatar:""}] 
+const avatarCheck = [] 
 
 
 app.post("/sign-up", (req, res) => {
@@ -37,9 +37,7 @@ app.post("/tweets", (req, res) => {
         res.send("OK")} 
 
         else {
-            res.send("UNAUTHORIZED")}
-            
-        
+            res.send("UNAUTHORIZED")}       
 })
 
 app.get("/tweets", (req, res) => {
