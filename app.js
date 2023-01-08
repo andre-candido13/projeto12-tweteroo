@@ -44,7 +44,7 @@ app.post("/tweets", (req, res) => {
 
 app.get("/tweets", (req, res) => {
      
-    let lastTweets = tweets.slice(0, 10)
+    let lastTweets = tweets.slice(-10)
     return res.send(lastTweets)
 
 }
