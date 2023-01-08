@@ -29,15 +29,16 @@ app.post("/sign-up", (req, res) => {
 
 app.post("/tweets", (req, res) => {
 
-    let userCheck = req.body
+    const {username, tweet} = req.body
 
-    if (users.find((item) => item.username === userCheck.username)) {
+    if (username && tweet) {
+        tweets.push({username, avatar: avatarCheck, tweet})
 
-        res.send("UNAUTHORIZED")} 
+        res.send("OK")} 
 
         else {
-            res.send("OK")}
-      tweets.push(...avatarCheck,...userCheck)
+            res.send("UNAUTHORIZED")}
+            
         
 })
 
