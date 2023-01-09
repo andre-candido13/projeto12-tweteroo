@@ -17,9 +17,9 @@ const avatarCheck = []
 
 app.post("/sign-up", (req, res) => {
     
-    const {username, avatarCheck} = req.body
+    const {username, avatar} = req.body
     
-    users.push({username, avatar: avatarCheck})
+    users.push({username, avatar})
 
     res.send("OK")
 }
